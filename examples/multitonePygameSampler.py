@@ -22,7 +22,7 @@ import thread
 import pygame
 import itertools
 
-samples=["C4.wav","D4.wav","E4.wav","F4.wav","G4.wav","A4.wav","B4.wav","C5.wav","Csharp4.wav","Dsharp4.wav","Fsharp4.wav","Gsharp4.wav","Asharp4.wav"]
+samples=["C4.mp3","D4.mp3","E4.mp3","F4.mp3","G4.mp3","A4.mp3","B4.mp3","C5.mp3","Csharp4.mp3","Dsharp4.mp3","Fsharp4.mp3","Gsharp4.mp3","Asharp4.mp3"]
 
 pygame.mixer.init()
 pygame.mixer.set_num_channels(13)
@@ -39,7 +39,7 @@ i=0
 sounds=[]*13
 while i<13:
     mcp.pullup(i,1)
-    sounds.append(pygame.mixer.Sound(samples[i]))
+    sounds.append("sounds/" + pygame.mixer.Sound(samples[i]))
     i=i+1
     
 i=13
